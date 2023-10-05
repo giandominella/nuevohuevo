@@ -1,40 +1,4 @@
-<?php
-    include_once 'includes/dbh.inc.php';
 
-    // Imagenes de la tabla "categoria", o sea el item de presentacion
-    $sqlCategoria = "SELECT imagen FROM categoria";
-    $resultCategoria = mysqli_query($conn, $sqlCategoria);
-    $imagesCategoria = array();
-    if (mysqli_num_rows($resultCategoria) > 0) {
-        while ($row = mysqli_fetch_assoc($resultCategoria)) {
-            $imagesCategoria[] = $row['imagen'];
-        }
-    }
-
-    // Imagenes de la tabla "items", o sea las ropas reales y coloridas
-    $sqlItems = "SELECT imagen FROM items";
-    $resultItems = mysqli_query($conn, $sqlItems);
-    $imagesItems = array();
-    if (mysqli_num_rows($resultItems) > 0) {
-        while ($row = mysqli_fetch_assoc($resultItems)) {
-            $imagesItems[] = $row['imagen'];
-        }
-    }
-
-    // Nombres de los objetos
-    $sqlDescItem = "SELECT descripcion FROM items";
-    $resultDescItems = mysqli_query($conn, $sqlDescItem);
-
-    if (!$resultDescItems) {
-        die("Error en la consulta: " . mysqli_error($conn));
-    }
-
-    $descripciones = array();
-
-    while($row = mysqli_fetch_assoc($resultDescItems)){
-        $descripciones[] = $row['descripcion'];
-    }
-?>
 
 
 <!DOCTYPE html>
