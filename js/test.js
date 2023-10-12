@@ -19,28 +19,155 @@ function checkFelicidad(){
         caraFeliz.style.display = "flex"
         caraTriste.style.display = "none"
         caraMeh.style.display = "none"
-        document.getElementById("cara-feliz-emoji").style.display ="flex"
-        document.getElementById("cara-meh-emoji").style.display = "none"
-        document.getElementById("cara-triste-emoji").style.display = "none"
 
-    } 
-    if (felicidad < 300) {
-        caraFeliz.style.display = "none"
-        caraMeh.style.display = "flex"
-        caraTriste.style.display = "none"
-        document.getElementById("cara-feliz-emoji").style.display ="none"
-        document.getElementById("cara-meh-emoji").style.display = "flex"
-        document.getElementById("cara-triste-emoji").style.display = "none"
-    }
-    if(felicidad < 150) {
-        caraFeliz.style.display = "none"
+        document.getElementById("felicidad8").style.display ="flex"
+        document.getElementById("felicidad7").style.display = "none"
+        document.getElementById("felicidad6").style.display = "none"
+        document.getElementById("felicidad5").style.display = "none"
+        document.getElementById("felicidad4").style.display = "none"
+        document.getElementById("felicidad3").style.display = "none"
+        document.getElementById("felicidad2").style.display = "none"
+        document.getElementById("felicidad1").style.display = "none"
+        document.getElementById("felicidad0").style.display = "none"
+        document.getElementById("felicidad00").style.display = "none"
+
+    } else if (felicidad >= 270) {
+        caraFeliz.style.display = "flex"
         caraMeh.style.display = "none"
-        caraTriste.style.display = "flex"
+        caraTriste.style.display = "none"
+        document.getElementById("felicidad8").style.display ="none"
+        document.getElementById("felicidad7").style.display = "flex"
+        document.getElementById("felicidad6").style.display = "none"
+        document.getElementById("felicidad5").style.display = "none"
+        document.getElementById("felicidad4").style.display = "none"
+        document.getElementById("felicidad3").style.display = "none"
+        document.getElementById("felicidad2").style.display = "none"
+        document.getElementById("felicidad1").style.display = "none"
+        document.getElementById("felicidad0").style.display = "none"
+        document.getElementById("felicidad00").style.display = "none"
 
-        document.getElementById("cara-feliz-emoji").style.display ="none"
-        document.getElementById("cara-meh-emoji").style.display = "none"
-        document.getElementById("cara-triste-emoji").style.display = "flex"
-    }
+    } else if(felicidad >= 240) {
+      caraFeliz.style.display = "flex"
+      caraMeh.style.display = "none"
+      caraTriste.style.display = "none"
+        document.getElementById("felicidad8").style.display ="none"
+        document.getElementById("felicidad7").style.display = "none"
+        document.getElementById("felicidad6").style.display = "flex"
+        document.getElementById("felicidad5").style.display = "none"
+        document.getElementById("felicidad4").style.display = "none"
+        document.getElementById("felicidad3").style.display = "none"
+        document.getElementById("felicidad2").style.display = "none"
+        document.getElementById("felicidad1").style.display = "none"
+        document.getElementById("felicidad0").style.display = "none"
+        document.getElementById("felicidad00").style.display = "none"
+
+    } else if(felicidad >= 210) {
+      caraFeliz.style.display = "none"
+      caraMeh.style.display = "flex"
+      caraTriste.style.display = "none"
+      document.getElementById("felicidad8").style.display ="none"
+      document.getElementById("felicidad7").style.display = "none"
+      document.getElementById("felicidad6").style.display = "none"
+      document.getElementById("felicidad5").style.display = "flex"
+      document.getElementById("felicidad4").style.display = "none"
+      document.getElementById("felicidad3").style.display = "none"
+      document.getElementById("felicidad2").style.display = "none"
+      document.getElementById("felicidad1").style.display = "none"
+      document.getElementById("felicidad0").style.display = "none"
+      document.getElementById("felicidad00").style.display = "none"
+
+  } else if(felicidad >= 180) {
+    caraFeliz.style.display = "none"
+    caraMeh.style.display = "flex"
+    caraTriste.style.display = "none"
+    document.getElementById("felicidad8").style.display ="none"
+    document.getElementById("felicidad7").style.display = "none"
+    document.getElementById("felicidad6").style.display = "none"
+    document.getElementById("felicidad5").style.display = "none"
+    document.getElementById("felicidad4").style.display = "flex"
+    document.getElementById("felicidad3").style.display = "none"
+    document.getElementById("felicidad2").style.display = "none"
+    document.getElementById("felicidad1").style.display = "none"
+    document.getElementById("felicidad0").style.display = "none"
+    document.getElementById("felicidad00").style.display = "none"
+
+} else if(felicidad >= 150) {
+    caraFeliz.style.display = "none"
+    caraMeh.style.display = "flex"
+    caraTriste.style.display = "none"
+    document.getElementById("felicidad8").style.display ="none"
+    document.getElementById("felicidad7").style.display = "none"
+    document.getElementById("felicidad6").style.display = "none"
+    document.getElementById("felicidad5").style.display = "none"
+    document.getElementById("felicidad4").style.display = "none"
+    document.getElementById("felicidad3").style.display = "flex"
+    document.getElementById("felicidad2").style.display = "none"
+    document.getElementById("felicidad1").style.display = "none"
+    document.getElementById("felicidad0").style.display = "none"
+    document.getElementById("felicidad00").style.display = "none"
+    
+} else if(felicidad >= 120) {
+  caraFeliz.style.display = "none"
+  caraMeh.style.display = "none"
+  caraTriste.style.display = "flex"
+  document.getElementById("felicidad8").style.display ="none"
+  document.getElementById("felicidad7").style.display = "none"
+  document.getElementById("felicidad6").style.display = "none"
+  document.getElementById("felicidad5").style.display = "none"
+  document.getElementById("felicidad4").style.display = "none"
+  document.getElementById("felicidad3").style.display = "none"
+  document.getElementById("felicidad2").style.display = "flex"
+  document.getElementById("felicidad1").style.display = "none"
+  document.getElementById("felicidad0").style.display = "none"
+  document.getElementById("felicidad00").style.display = "none"
+  
+} else if(felicidad >= 90) {
+  caraFeliz.style.display = "none"
+  caraMeh.style.display = "none"
+  caraTriste.style.display = "flex"
+  document.getElementById("felicidad8").style.display ="none"
+  document.getElementById("felicidad7").style.display = "none"
+  document.getElementById("felicidad6").style.display = "none"
+  document.getElementById("felicidad5").style.display = "none"
+  document.getElementById("felicidad4").style.display = "none"
+  document.getElementById("felicidad3").style.display = "none"
+  document.getElementById("felicidad2").style.display = "none"
+  document.getElementById("felicidad1").style.display = "flex"
+  document.getElementById("felicidad0").style.display = "none"
+  document.getElementById("felicidad00").style.display = "none"
+  
+} else if(felicidad >= 60) {
+  caraFeliz.style.display = "none"
+  caraMeh.style.display = "none"
+  caraTriste.style.display = "flex"
+  document.getElementById("felicidad8").style.display ="none"
+  document.getElementById("felicidad7").style.display = "none"
+  document.getElementById("felicidad6").style.display = "none"
+  document.getElementById("felicidad5").style.display = "none"
+  document.getElementById("felicidad4").style.display = "none"
+  document.getElementById("felicidad3").style.display = "none"
+  document.getElementById("felicidad2").style.display = "none"
+  document.getElementById("felicidad1").style.display = "none"
+  document.getElementById("felicidad0").style.display = "flex"
+  document.getElementById("felicidad00").style.display = "none"
+  
+} else {
+  caraFeliz.style.display = "none"
+  caraMeh.style.display = "none"
+  caraTriste.style.display = "flex"
+  document.getElementById("felicidad8").style.display ="none"
+  document.getElementById("felicidad7").style.display = "none"
+  document.getElementById("felicidad6").style.display = "none"
+  document.getElementById("felicidad5").style.display = "none"
+  document.getElementById("felicidad4").style.display = "none"
+  document.getElementById("felicidad3").style.display = "none"
+  document.getElementById("felicidad2").style.display = "none"
+  document.getElementById("felicidad1").style.display = "none"
+  document.getElementById("felicidad0").style.display = "none"
+  document.getElementById("felicidad00").style.display = "flex"
+  
+}
+
 
     btn.classList.add("jello-horizontal")
 
@@ -48,6 +175,7 @@ function checkFelicidad(){
         btn.classList.remove('jello-horizontal')
  
      }, 200)
+     console.log(felicidad)
     
 }
 checkFelicidad()
@@ -129,20 +257,24 @@ let notifEl = document.getElementById("money-notif")
 
 btnMonedas.onclick = function() {
     menuMonedas.style.display = "block";
+    document.getElementById("herramientas").style.display = "none";
+    document.getElementById("borde-inicio").style.display = "none";
+    document.getElementById("eggy").style.display = "none";
+    document.getElementById("borde-monedas").style.display = "flex";
   }
 
   cerrarMonedas.onclick = function() {
     menuMonedas.style.display = "none";
+    document.getElementById("herramientas").style.display = "flex";
+    document.getElementById("borde-inicio").style.display = "flex";
+    document.getElementById("eggy").style.display = "flex";
+    document.getElementById("borde-monedas").style.display = "none";
   }
 
   window.onclick = function(event) {
     if (event.target == menuMonedas) {
         menuMonedas.style.display = "none";
     }
-}
-
-document.getElementById("superior-money").onclick = function() {
-  menuMonedas.style.display = "block";
 }
 
 
@@ -183,6 +315,7 @@ document.getElementById("aceptar-email").onclick = function(price, feliciPrice){
     feliciPrice = 20
     felicidad += feliciPrice
     felicidadActualEl.textContent = felicidad //"Happiness: " + felicidad
+    document.getElementById("happ-notif").style.display= "flex"
     checkFelicidad()
 }
 
@@ -471,15 +604,19 @@ let cerrarFotos = document.getElementById("cerrar-fotos")
 
 btnFotos.onclick = function() {
     menuFotos.style.display = "block";
+    document.getElementById("borde-inicio").style.display = "none";
+
   }
 
   cerrarFotos.onclick = function() {
     menuFotos.style.display = "none";
+    document.getElementById("borde-inicio").style.display = "flex";
   }
 
   window.onclick = function(event) {
     if (event.target == menuFotos) {
         menuFotos.style.display = "none";
+        
     }
 }
 ///dni

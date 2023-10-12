@@ -18,7 +18,14 @@
     align-items: center;
     justify-content: center;
 }
-#borde{
+#borde-inicio{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -100;
+}
+#borde-monedas{
+    display: none;
     position: fixed;
     height: 100vh;
     width: 100vw;
@@ -259,7 +266,58 @@ body{
     
 }
 
+#barra-superior{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 14%;
+}
 
+#herramientas-happiness{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6vw;
+    width: 50%;
+}
+#corazones{
+    height: 50%;
+    width: auto;
+}
+
+#happ-notif{
+    display: none;
+}
+#felicidadActual{
+    display: none;
+}
+
+#superior-money{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: flex-end;
+    padding-right: 4vw;
+
+}
+
+#moneyActual{
+    font-family: 'DS Digital';
+    display: flex;
+    align-items: center;
+    font-size: 5vh;
+    padding-right: 2vw;
+}
+#money-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#money-text img{
+    height: 30%;
+}
+/* 
 
 #barra-superior{
     align-items: center;
@@ -303,6 +361,7 @@ body{
 }
 
 #superior-money{
+    font-family: 'DS Digital';
     display: flex;
     flex-direction: row;
     width: 50%;
@@ -313,6 +372,7 @@ body{
 }
 
 #felicidadActual{
+    font-family: 'DS Digital';
     padding-left: 2vw;
     display: flex;
     flex-direction: row;
@@ -328,7 +388,7 @@ body{
     font-size: 25px;
     align-items: center;
 }
-
+ */
 #credit-pay{
     display: none;
     flex-direction: column;
@@ -388,7 +448,7 @@ body{
 
 #eggy{
     width: 100% !important;
-    height: 64% !important;
+    height: 66% !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -533,60 +593,78 @@ body{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);  
-    backdrop-filter: blur(5px);
+    
+}
+.modal-filler{
+    height: 14%;
 }
 
 .modal-content {
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    margin: 30% auto auto;
-    padding: 20px;
+    margin: 0% auto 0px;
     width: 80%;
-    height: 70%;
+    height: 80%;
     font-size: 14px;
     
   }
 
 .modal-header{
-    height: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 5%;
+    height: 6%;
 }
 .modal-header  p{
-    padding-top: 10px;
-    font-weight: 800;
+    display: flex;
+    align-items: center;
+
+    font-size: 5vw;
+    font-weight: 600;
+    margin-right: 15%;
+}
+.close {
+    color: #324757;
+    font-size: 4vh;
+}
+#cerrar-monedas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    background-color: #5A7C9B;
+    box-shadow: inset -3px -3px 5px 2px rgba(0,0,0,0.3), inset 1px 1px 3px 2px rgba(255,255,255,0.5);
+    -webkit-box-shadow: inset -3px -3px 5px 2px rgba(0,0,0,0.3), inset 1px 1px 3px 2px rgba(255,255,255,0.5);
+    -moz-box-shadow: inset -3px -3px 5px 2px rgba(0,0,0,0.3), inset 1px 1px 3px 2px rgba(255,255,255,0.5);
 }
 
-.close {
-    color: #555555;
-    font-size: 28px;
-}
-  
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 .modal-allcards{
     overflow: scroll;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding-top: 5%;
 }
 
 .modal-card{
+    display: flex;
+    flex-direction: column;
     height: fit-content;
+    width: 48%;
     font-weight: 400;
-    background-color: rgba(255, 255, 255,0.7);
-    border-radius: 7px;
-    margin-top: 2vh;
-    padding: 3vw;
+    background-color: #8AA7C1;
+    border-radius: 15%;
+    margin-bottom: 5%;
 }
 
+.modal-card span{
+    font-weight: bolder;
+}
 
 .box-content{
     display: flex;
@@ -599,23 +677,65 @@ body{
     height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 2vh 0vh 1vh;
 }
 
 .modal-card-content img{
-    width: 32vw;
+    width: 40%;
     height: auto;
-}
-
-.modal-card-content b{
-    font-weight: 600;
+    padding-top: 1vh;
 }
 
 .modal-card-button{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 10%;
-    margin-top: 2vw;
 }
+
+.modal-aceptar{
+    padding: 1vh 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color:rgba(255, 255, 255, 0.7);
+}
+
+.modal-price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.6) !important;
+
+}
+.modal-price p{
+    font-family: 'DS Digital';
+    font-size: 10vw;
+    font-weight: 600;
+}
+.modal-price img{
+    height: 5vh;
+    margin-left: 3vw;
+}
+.modal-rechazar{
+    padding: 1.5vw 0px;
+    background-color: #7C8892;
+    color: #434343;
+    border: none;
+}
+
+
+/* .modal-card-button button{
+    border-radius: 5px;
+    border: solid 1px #D1D1D6;
+    width: 49%;
+    height: 100%;
+    background-color: white;
+    color: #007AFF;
+    padding: 8px 0px;
+} */
 
 .carta{
     display: flex;
@@ -694,15 +814,7 @@ body{
     height: 5vh;
 }
 
-.modal-card-button button{
-    border-radius: 5px;
-    border: solid 1px #D1D1D6;
-    width: 49%;
-    height: 100%;
-    background-color: white;
-    color: #007AFF;
-    padding: 8px 0px;
-}
+
 
 #email{
     margin: 2vh 0px 1vh 0px;

@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="./images/UI/faviconn.png" type="image/x-icon">
         <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
         <link rel="stylesheet" href="./css/anim.css?v=<?php echo time(); ?>">
         <link rel="stylesheet" href="./css/colores.css?v=<?php echo time(); ?>">
@@ -19,7 +19,8 @@
     </head>
     <body>
         
-        <img src="./images/UI/borde.png" id="borde">
+        <img src="./images/UI/borde.png" id="borde-inicio">
+        <img src="./images/UI/borde-monedas.png" id="borde-monedas">
 
         <!-- pantalla de inicio  -->
         <div id="pantalla-inicio" class="pantalla">
@@ -50,7 +51,7 @@
             <button id="gracias-next" class="boton button-blue">Continuar</button>
         </div>
 
-         <!-- notificacion del regalo  -->
+         <!-- notificacion del regalo 
         <div id="gift">
             <div id="gift-x">
                 <span class="close">&times;</span>
@@ -59,6 +60,7 @@
                 <img src="./images/giftt.png">
             </div>
         </div>
+         -->
 
          <!-- tarjeta de regalo para ingresar direccion  -->
         <div id="gift-card" class="modal">
@@ -107,36 +109,91 @@
                 </div>
             </div>
 
-            <div id="money-notif" class="animate__animated animate__fadeInUp">
-                <div id="notif-left">
-                    <img src="./images/coin.png">
-                </div>
-                <div id="notif-right">
-                    <p id="cuanto-gano">¡Ganaste 0 monedas!</p>
-                </div>
-            </div>
 
-            <div id="barra-superior">
+
+             <div id="barra-superior">
+
+                <div id="herramientas-happiness" class="superior-happ">
+
+
+                    <div id="corazones">
+                        <img src="./images/UI/Felicidad/felicidad8.png" id="felicidad8">
+                        <img src="./images/UI/Felicidad/felicidad7.png" id="felicidad7">
+                        <img src="./images/UI/Felicidad/felicidad6.png" id="felicidad6">
+                        <img src="./images/UI/Felicidad/felicidad5.png" id="felicidad5">
+                        <img src="./images/UI/Felicidad/felicidad4.png" id="felicidad4">
+                        <img src="./images/UI/Felicidad/felicidad3.png" id="felicidad3">
+                        <img src="./images/UI/Felicidad/felicidad2.png" id="felicidad2">
+                        <img src="./images/UI/Felicidad/felicidad1.png" id="felicidad1">
+                        <img src="./images/UI/Felicidad/felicidad0.png" id="felicidad0">
+                        <img src="./images/UI/Felicidad/felicidad00.png" id="felicidad00">
+
+<!--                         <img src="./images/UI/Felicidad/felicidad7.png" id="cara-meh-emoji">
+                        <img src="./images/UI/Felicidad/felicidad6.png" id="cara-triste-emoji"> -->
+                    </div>  
+                        <h3 id="felicidadActual"></h3>
+                </div>
+
+
+                <div id="superior-money">
+
+                    <div id="money-notif" class="animate__animated animate__fadeInUp">
+
+                        <div id="notif-left">
+                            <img src="./images/UI/coin-single.png">
+                        </div>
+
+                        <div id="notif-right">
+                            <p id="cuanto-gano">¡Ganaste 0 monedas!</p>
+                        </div>
+
+                    </div>
+
+                    <div id="money-text"> 
+                        <h3 id="moneyActual"></h3>
+                        <img src="./images/UI/coin-stack.png">
+                    </div>
+                </div>
+
+
+            </div>
+ 
+
+            
+
+
+<!--             <div id="barra-superior">
+
+                <div id="money-notif" class="animate__animated animate__fadeInUp">
+                    <div id="notif-left">
+                        <img src="./images/coin.png">
+                    </div>
+                    <div id="notif-right">
+                        <p id="cuanto-gano">¡Ganaste 0 monedas!</p>
+                    </div>
+                </div>
                 
-                <!--                 
+                                 
                     <div id="nombre-superior">
                     <h3>Huevito</h3>
                 </div> 
-                -->
+                
                 <div id="elementos-superior">
                     <div class="superior-happ" id="herramientas-happiness">
-                        <img src="./images/cara1.png" id="cara-feliz-emoji">
-                        <img src="./images/cara2.png" id="cara-meh-emoji">
-                        <img src="./images/cara3.png" id="cara-triste-emoji">
+                        <img src="./images/UI/Felicidad/felicidad8.png" id="cara-feliz-emoji">
+                        <img src="./images/UI/Felicidad/felicidad3.png" id="cara-meh-emoji">
+                        <img src="./images/UI/Felicidad/felicidad0.png" id="cara-triste-emoji">
+                        
                         <div id="felicidadActual"><h3></h3></div>
                     </div>
+
                     <div id="superior-money">
                         <div id="moneyActual"><h3></h3></div>
                         <img src="./images/UI/coin-stack.png" alt="">
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
             <div id="eggy">
                 <div id="eggy-features" class="animate__animated">
@@ -336,14 +393,84 @@
                 </div>
             </div>
 
+            
+
             <div id="interior-monedas" class="modal fade-in">
+                <div class="modal-filler"></div>
                 <div class="modal-content">
-                    <div class="modal-header">
-                    <p>TIENDA DE MONEDAS</p>
-                    <span class="close" id="cerrar-monedas">&times;</span>
-                    </div>
                     <div class="modal-allcards">
-                        <div class="modal-card" id="mic-card">
+
+                        <div class="modal-card boton-shadow">
+                            <div class="modal-card-content" id="mic-card">
+                                <p>COMPARTE TU <span>MICROFONO</span></p>
+                                <img src="./images/UI/Coinshop/mike.png">
+                            </div>
+
+                            <div class="modal-card-button">
+                                <div  id="aceptar-mic" class="modal-aceptar azul-vivo boton-shadow">
+                                    <p>ACEPTAR</p>
+                                    <div class="modal-price">
+                                    <p>+1500</p><img src="./images/UI/coin-stack.png"></div>
+                                </div>
+                               
+                                <button id="ignorar-mic" class="modal-rechazar boton-shadow">Rechazar</button>
+                            </div>
+                        </div>
+
+                        <div class="modal-card boton-shadow" id="email-card">
+                            <div class="modal-card-content">
+                                <p>SUSCRIBITE AL <span>NEWSLETTER</span></p>
+                                <img src="./images/UI/Coinshop/newsletter.png">
+                                <!-- <input type="email" id="email" required> -->
+                            </div>
+                            <div class="modal-card-button">
+                                <div  id="aceptar-email" class="modal-aceptar amarillo-vivo boton-shadow">
+                                    <p>ACEPTAR</p>
+                                    <div class="modal-price">
+                                    <p>+500</p><img src="./images/UI/coin-stack.png"></div>
+                                </div>
+                                <button id="ignorar-email" class="modal-rechazar boton-shadow">Rechazar</button>
+                            </div>
+                        </div>
+
+                        <div class="modal-card boton-shadow" id="twitter-card">
+                            <div class="modal-card-content">
+                                <p>SIGUENOS EN <span>TWITTER</span></p>
+                                <img src="./images/UI/Coinshop/x.png">
+                            </div>
+                            <div class="modal-card-button">
+                                <div  id="aceptar-twitter" class="modal-aceptar rosado boton-shadow">
+                                    <a href="https://twitter.com/home" target="_blank"><p>ACEPTAR</p></a>
+                                    <div class="modal-price">
+                                    <p>+300</p><img src="./images/UI/coin-stack.png"></div>
+                                </div>
+                                
+                                <button id="ignorar-twitter" class="modal-rechazar boton-shadow">Rechazar</button>
+                            </div>
+                        </div>
+
+                        <div class="modal-card boton-shadow" id="credit-card">
+                            <div class="modal-card-content">
+                                <p>APROVECHA ESTA <span>OFERTA</span></p>
+                                <img src="./images/UI/Coinshop/deal.png">
+                            </div>
+                            <div class="modal-card-button">
+                            <div  id="aceptar-credit" class="modal-aceptar purpura boton-shadow">
+                                    <p>ACEPTAR</p>
+                                    <div class="modal-price">
+                                    <p>+2000</p><img src="./images/UI/coin-stack.png"></div>
+                                </div>
+                                <button id="ignorar-credit" class="modal-rechazar boton-shadow">Rechazar</button>
+                            </div>
+                        </div> 
+
+
+
+
+                    </div>
+
+
+                        <!-- <div class="modal-card" id="mic-card">
                             <div class="modal-card-content">
                                 <p><b>OBTIENE 500 MONEDAS</b></p><br>
                                 <p>Comparte tu <b>micrófono</b> con TUHUEVO y recibirás <b>1500 monedas</b></p>
@@ -386,10 +513,21 @@
                                 <button id="aceptar-credit" class="button-blue">$9.99</button>
                                 <button id="ignorar-credit">Ignorar</button>
                             </div>
-                        </div>
+                        </div> -->
+
+                        
 
                     </div>  
+                    
+                    <div class="modal-header">
+                    <img src="./images/UI/coin-single.png">
+                    <p>Tienda de Monedas</p>
+                    <span class="close" id="cerrar-monedas">&times;</span>
                 </div>
+                </div>
+
+               
+
             </div>
 
             <div id="credit-pay" class="modal">
